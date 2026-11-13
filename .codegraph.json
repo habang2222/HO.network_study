@@ -1,0 +1,33 @@
+// CodeGraph project settings: only what CodeGraph cannot find out by itself.
+// Uncomment what you need; a key here wins over the matching VS Code setting.
+{
+  // Run & Trace on this machine
+  "run": {
+    // "entry": "dfdf.c",                  // file with main(), or the Python script
+    // "target": "app",                    // when the build makes several programs from it
+    // "args": ["--port", "7000"],         // program arguments
+    // "cwd": "src",                       // where to run it (default: where the build puts it)
+    // "env": { "LOG_LEVEL": "debug" },    // extra environment
+    // a build CodeGraph does not read by itself (a script, Meson, Bazel…) runs in a traced
+    // copy of the workspace with every compiler wrapped; then `program` is started
+    // "build": "./build.sh",              // build command
+    // "program": "out/app",               // what it builds (workspace-relative)
+    // "buildFlags": ["-DDEBUG"],          // extra compile flags
+    // "linkFlags": ["-lssl", "-lcrypto"],  // extra libraries
+    // "timeoutSeconds": 60                // stop after this long (default: when it ends, or Stop)
+  },
+
+  // Run & Trace with Docker Compose
+  "compose": {
+    // "files": ["compose.yaml"],          // compose files, in order
+    // "profiles": ["test"],               // profiles to enable
+    // "services": ["server","client"],    // which to trace (default: all that have your code)
+    // a container that only runs a program built elsewhere: build it first, in the container
+    // "build": { "server": "make -C /app" },  // per service: run before its command
+    // code where CodeGraph cannot see it (not mounted, not copied in by the Dockerfile)
+    // "sourcePath": { "server": "/srv/app" },  // per service: where the workspace is
+    // "env": { "server": { "CXX": "g++-12" } },  // per service: extra environment
+    // "timeoutSeconds": 60,               // how long the programs run (default: until Stop)
+    // "startTimeoutSeconds": 600          // time for image and in-container builds
+  }
+}
