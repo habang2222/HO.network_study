@@ -1,16 +1,18 @@
-#include <iostream>
-#include <string>
+#ifndef CONNECTION_HPP
+#define CONNECTION_HPP
 
+#include <string>
 using namespace std;
 
-class connection{
-public :    
+class Connection {
+private:
     string ip;
     int port;
 
-    connection(string a, int b) : ip(a), port(b){
+public:
+    Connection(string a, int b);
 
-    }
-    
-
+    void show();
 };
+
+#endif
