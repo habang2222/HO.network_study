@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Connection::Connection(string a, int b) {
+Connection::Connection(string a, int b) {//객체 생성자
     ip = a;
     port = b;
 }
