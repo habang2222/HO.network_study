@@ -2,6 +2,9 @@
 #define CONNECTION_HPP
 
 #include <string>
+#include <iostream>
+
+using namespace std;
 
 class Connection {
     public:
@@ -11,7 +14,5 @@ class Connection {
         Connection(std::string a, int b);
         void show();
 };
-
-
 
 #endif

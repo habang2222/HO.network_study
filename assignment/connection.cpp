@@ -3,6 +3,11 @@
 
 using namespace std;
 
+Connection::Connection(string a, int b) {
+    ip = a;
+    port = b;
+}
+
 void Connection::show() {
     cout << "IP: " << ip << ", Port: " << port << endl;
 }
