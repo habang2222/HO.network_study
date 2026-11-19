@@ -1,11 +1,8 @@
 #include <iostream>
 #include "connection.hpp"
 
-Connection::Connection(std::string a, int b) {
-    ip = a;
-    port = b;
-}
+using namespace std;
 
 void Connection::show() {
-    std::cout << "IP: " << ip << ", Port: " << port << std::endl;
+    cout << "IP: " << ip << ", Port: " << port << endl;
 }
