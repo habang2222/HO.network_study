@@ -9,7 +9,7 @@ public:
         std::cout << "객체 생성" << std::endl;
     }
 
-    ~Test()
+    ~Test()//소멸자
     {
         std::cout << "객체 소멸" << std::endl;
     }
